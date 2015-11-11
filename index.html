@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="jquery.min.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="object.js"></script>
+</head>
+<body ng-controller="myController">
+
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<td>Rank</td>
+				<td>City</td>
+				<td>State</td>
+				<td>Year Estimate</td>
+				<td>Last Census</td>
+				<td>% Change</td>
+				<td>Land Area (sq mi)</td>
+				<td>Land Area (sq km)</td>
+				<td>Population Density(1/sq mi)</td>
+				<td>Population Density(1/sq km)</td>
+				<td>Longitude and Latitude</td>
+			</tr>
+		</thead>
+		<tr ng-repeat = 'city in cities'>
+			<td class="left-data">{{city.yearRank}}</td>
+			<td class="inner-data">{{city.city}}</td>
+			<td class="inner-data">{{city.state}}</td>
+			<td class="inner-data">{{city.yearEstimate}}</td>
+			<td class="inner-data">{{city.lastCensus}}</td>
+			<td class="inner-data">{{city.change}}</td>
+			<td class="inner-data">{{city.landAreaSqMiles}}</td>
+			<td class="inner-data">{{city.landAreaSqKm}}</td>
+			<td class="inner-data">{{city.lastPopDensityMiles}}</td>
+			<td class="inner-data">{{city.lastPopDensityKm}}</td>
+			<td class="right-data">{{city.latLon}}</td>
+		</tr>
+	</table>
+</body>
+</html>
