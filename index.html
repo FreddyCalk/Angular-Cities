@@ -9,6 +9,14 @@
 	<script src="object.js"></script>
 </head>
 <body ng-controller="myController">
+	<input class="btn btn-primary" type="button" value="City Rank" ng-click = "sortStyle = 'yearRank'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="City" ng-click = "sortStyle = 'city'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="State" ng-click = "sortStyle = 'state'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="Current Estimate" ng-click = "sortStyle = 'yearEstimate'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="Last Census" ng-click = "sortStyle = 'lastCensus'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="% Change" ng-click = "sortStyle = 'change'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="Land Area" ng-click = "sortStyle = 'landAreaSqMiles'; reverse = !reverse">
+	<input class="btn btn-primary" type="button" value="Population Density" ng-click = "sortStyle = 'lastPopDensityMiles'; reverse = !reverse">
 
 	<table class="table table-striped table-hover">
 		<thead>
@@ -26,7 +34,7 @@
 				<td>Longitude and Latitude</td>
 			</tr>
 		</thead>
-		<tr ng-repeat = 'city in cities'>
+		<tr ng-repeat = 'city in cities	 | orderBy: sortStyle:reverse'>
 			<td class="left-data">{{city.yearRank}}</td>
 			<td class="inner-data">{{city.city}}</td>
 			<td class="inner-data">{{city.state}}</td>
