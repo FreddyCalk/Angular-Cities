@@ -1,17 +1,5 @@
-.inner-data, .right-data, .left-data{
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	padding:5px;
-}
-.right-data{
-	border-right:1px solid black;
-}
-.left-data{
-	border-left:1px solid black;
-}
-thead td{
-	font-weight: bold;
-}
-.sorter{
-	display:none;
+#map{
+	height: 99vh;
+	width:75%;
+	float:left;
 }
